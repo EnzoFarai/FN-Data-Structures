@@ -1,1 +1,64 @@
-
+{
+    "Unit 1": {
+        "Chapter 1": [
+            { "lesson": 1, "title": "Introduction to Data Structures" },
+            { "lesson": 2, "title": "Classification of Data Structures" },
+            { "lesson": 3, "title": "Pointers" },
+            { "lesson": 4, "title": "Dynamic Memory Allocation" },
+            { "lesson": 5, "title": "Mathematical Notation and Functions" }
+        ],
+        "Chapter 2": [
+            { "lesson": 1, "title": "Algorithm Analysis" },
+            { "lesson": 2, "title": "Asymptotic Notations" },
+            { "lesson": 3, "title": "Algorithm Complexity" },
+            { "lesson": 4, "title": "ADT" }
+        ],
+        "Chapter 3": [
+            { "lesson": 1, "title": "Arrays" },
+            { "lesson": 2, "title": "Array Operations (Traversal, Insertion, Deletion)" },
+            { "lesson": 3, "title": "Search Operations on Array (Linear, Binary Search)" },
+            { "lesson": 4, "title": "Selection Sort" },
+            { "lesson": 5, "title": "Bubble Sort" },
+            { "lesson": 6, "title": "Merge Sort" },
+            { "lesson": 7, "title": "Quick Sort" },
+            { "lesson": 8, "title": "Insertion Sort" },
+            { "lesson": 9, "title": "Comparison of Sorting Techniques" },
+            { "lesson": 10, "title": "Polynomial Representation" },
+            { "lesson": 11, "title": "Structures" }
+        ]
+    },
+    "Unit 2": {
+        "Chapter 1": [
+            { "lesson": 1, "title": "Algorithm Analysis" },
+            { "lesson": 2, "title": "Linked List Operations" },
+            { "lesson": 3, "title": "Linked List Operations (Insertion)" },
+            { "lesson": 4, "title": "Linked List (Deletion)" }
+        ],
+        "Chapter 2": [
+            { "lesson": 1, "title": "Introduction and Representation of Stack" },
+            { "lesson": 2, "title": "Stack Operations" },
+            { "lesson": 3, "title": "Types and Evaluation of Expression" },
+            { "lesson": 4, "title": "Infix to Postfix and Prefix Conversion" }
+        ],
+        "Chapter 3": [
+            { "lesson": 1, "title": "Representation of Queue" },
+            { "lesson": 2, "title": "Types of Queues" },
+            { "lesson": 3, "title": "Queue Operations" },
+            { "lesson": 4, "title": "Applications of Queue" }
+        ]
+    },
+    "Unit 3": {
+        "Chapter 1": [
+            { "lesson": 1, "title": "Representation of Trees" },
+            { "lesson": 2, "title": "Binary Trees and its Representation" },
+            { "lesson": 3, "title": "Trees Traversal" },
+            { "lesson": 4, "title": "Binary Search Trees" },
+            { "lesson": 5, "title": "Heap and AVL Trees" }
+        ],
+        "Chapter 2": [
+            { "lesson": 1, "title": "Graph and Introduction" },
+            { "lesson": 2, "title": "Graph Representation" },
+            { "lesson": 3, "title": "BFS and DFS" }
+        ]
+    }
+}
