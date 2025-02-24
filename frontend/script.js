@@ -1,3 +1,12 @@
+// Fetch curriculum data
+fetch('frontend/data/curriculum.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data); // Log the data to verify it's loaded
+        generateLessonPath(data, 'Unit 1', 'Chapter 1'); // Generate lessons for Unit 1, Chapter 1
+    })
+    .catch(error => console.error('Error loading curriculum:', error));
+
 // Update Streak, Gems, and Hearts
 document.getElementById('streak').innerText = localStorage.getItem('streak') || 0;
 document.getElementById('gems').innerText = localStorage.getItem('gems') || 208;
@@ -36,26 +45,48 @@ function stopClock() {
     clearInterval(timerInterval);
 }
 
-// Handle Lesson Clicks
-const lessonCircles = document.querySelectorAll('.lesson-circle');
-lessonCircles.forEach((circle, index) => {
-    circle.addEventListener('click', () => {
-        if (index === 0) {
-            startClock(); // Start the clock when the first lesson is clicked
-        }
+// Function to generate lesson paths
+function generateLessonPath(curriculum, unit, chapter) {
+    const lessonContainer = document.querySelector('.lesson-path');
+    lessonContainer.innerHTML = ''; // Clear existing lessons
 
-        const lesson = circle.getAttribute('data-lesson');
-        const title = circle.getAttribute('title');
+    const lessons = curriculum[unit][chapter];
+    lessons.forEach((lesson, index) => {
+        const lessonRow = document.createElement('div');
+        lessonRow.classList.add('lesson-row', index % 2 === 0 ? 'left' : 'right');
+
+        const lessonCircle = document.createElement('div');
+        lessonCircle.classList.add('lesson-circle');
+        lessonCircle.setAttribute('data-lesson', lesson.lesson);
+        lessonCircle.setAttribute('title', lesson.title);
+        lessonCircle.innerText = '?';
+
+        lessonRow.appendChild(lessonCircle);
+        lessonContainer.appendChild(lessonRow);
+    });
+
+    // Add gift box at the end
+    const giftBox = document.createElement('div');
+    giftBox.classList.add('gift-box');
+    giftBox.innerHTML = '<i class="fas fa-gift"></i>';
+    lessonContainer.appendChild(giftBox);
+}
+
+// Handle Lesson Clicks
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('lesson-circle')) {
+        const lesson = event.target.getAttribute('data-lesson');
+        const title = event.target.getAttribute('title');
         alert(`Starting Lesson ${lesson}: ${title}`);
-        circle.classList.add('completed');
-        circle.innerText = '✔';
+        event.target.classList.add('completed');
+        event.target.innerText = '✔';
 
         // Check if all lessons are completed
         const incompleteLessons = document.querySelectorAll('.lesson-circle:not(.completed)');
         if (incompleteLessons.length === 0) {
             stopClock(); // Stop the clock when all lessons are completed
         }
-    });
+    }
 });
 
 // Handle Gift Box Click
