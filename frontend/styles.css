@@ -1,161 +1,161 @@
 :root {
-       --primary-color: #58cc02; /* Duolingo green */
-       --secondary-color: #ffd700; /* Gold for completed lessons */
-       --background-color: #ffffff;
-       --text-color: #333;
-       --unit-header-color: #87ceeb; /* Sky blue for unit header */
-       --footer-color: #58cc02; /* Match lesson circles */
-   }
+    --primary-color: #58cc02; /* Duolingo green */
+    --secondary-color: #ffd700; /* Gold for completed lessons */
+    --background-color: #ffffff;
+    --text-color: #333;
+    --unit-header-color: #87ceeb; /* Sky blue for unit header */
+    --footer-color: #58cc02; /* Match lesson circles */
+}
 
-   body {
-       font-family: Arial, sans-serif;
-       background-color: var(--background-color);
-       color: var(--text-color);
-       margin: 0;
-       padding: 0;
-       text-align: center;
-   }
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-   /* Header */
-   .header {
-       display: flex;
-       justify-content: space-around;
-       align-items: center;
-       padding: 10px;
-       background-color: var(--primary-color);
-       color: white;
-       font-size: 18px;
-   }
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+}
 
-   .header .logo {
-       width: 40px;
-       height: 40px;
-   }
+.header .logo {
+    width: 40px;
+    height: 40px;
+}
 
-   .header .icon {
-       display: flex;
-       align-items: center;
-       gap: 5px;
-   }
+.header .icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-   .header .icon.blue {
-       color: #3498db;
-   }
+.header .icon.blue {
+    color: #3498db;
+}
 
-   .header .icon.red {
-       color: #e74c3c;
-   }
+.header .icon.red {
+    color: #e74c3c;
+}
 
-   /* Unit Header */
-   .unit-header {
-       background-color: var(--unit-header-color);
-       color: white;
-       padding: 15px;
-       font-size: 16px;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-   }
+/* Unit Header */
+.unit-header {
+    background-color: var(--unit-header-color);
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-   .unit-header .unit-text {
-       font-size: 24px;
-       font-weight: bold;
-   }
+.unit-header .unit-text {
+    font-size: 24px;
+    font-weight: bold;
+}
 
-   .unit-header strong {
-       font-size: 18px;
-   }
+.unit-header strong {
+    font-size: 18px;
+}
 
-   /* Lesson Container */
-   .lesson-container {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       margin-top: 20px;
-       position: relative;
-   }
+/* Lesson Container */
+.lesson-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
 
-   .lesson-path {
-       display: flex;
-       flex-direction: column;
-       gap: 20px;
-       position: relative;
-   }
+.lesson-path {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
 
-   .lesson-row {
-       display: flex;
-       align-items: center;
-       gap: 20px;
-       position: relative;
-   }
+.lesson-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
 
-   .lesson-row.left {
-       justify-content: flex-start;
-       transform: translateX(-30px);
-   }
+.lesson-row.left {
+    justify-content: flex-start;
+    transform: translateX(-30px);
+}
 
-   .lesson-row.right {
-       justify-content: flex-end;
-       transform: translateX(30px);
-   }
+.lesson-row.right {
+    justify-content: flex-end;
+    transform: translateX(30px);
+}
 
-   .lesson-circle {
-       width: 50px;
-       height: 50px;
-       background-color: var(--primary-color);
-       color: white;
-       font-size: 24px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       border-radius: 50%;
-       font-weight: bold;
-       cursor: pointer;
-       transition: background-color 0.3s;
-   }
+.lesson-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-   .lesson-circle.completed {
-       background-color: var(--secondary-color);
-   }
+.lesson-circle.completed {
+    background-color: var(--secondary-color);
+}
 
-   .lesson-circle:hover::after {
-       content: attr(title);
-       position: absolute;
-       background-color: var(--text-color);
-       color: white;
-       padding: 5px;
-       border-radius: 5px;
-       font-size: 14px;
-       top: -30px;
-       left: 50%;
-       transform: translateX(-50%);
-   }
+.lesson-circle:hover::after {
+    content: attr(title);
+    position: absolute;
+    background-color: var(--text-color);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-   /* Clock */
-   .clock {
-       margin-top: 20px;
-       font-size: 24px;
-       font-weight: bold;
-       color: var(--primary-color);
-   }
+/* Clock */
+.clock {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
 
-   /* Footer Navigation */
-   footer {
-       display: flex;
-       justify-content: space-around;
-       padding: 15px;
-       background-color: var(--footer-color);
-       position: fixed;
-       width: 100%;
-       bottom: 0;
-   }
+/* Footer Navigation */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: var(--footer-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
 
-   footer .material-symbols-outlined, footer .fas {
-       font-size: 32px;
-       color: white;
-       cursor: pointer;
-   }
+footer .material-symbols-outlined, footer .fas {
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
 
-   footer .fa-cogs {
-       color: white;
-   }
+footer .fa-cogs {
+    color: white;
+}
